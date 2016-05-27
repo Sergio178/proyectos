@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>manualtco</title>
+<!-- 2005-12-31 sáb 22:19 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="ingenieros" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">manualtco</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Introducción</a></li>
+<li><a href="#sec-2">2. Componentes del TCO.</a></li>
+<li><a href="#sec-3">3. Costos relativos.</a></li>
+<li><a href="#sec-4">4. Como calcular un TCO</a></li>
+<li><a href="#sec-5">5. TCO Windows y GNU/linux</a>
+<ul>
+<li><a href="#sec-5-1">5.1. Adquisición del Software</a></li>
+<li><a href="#sec-5-2">5.2. Mantenimiento y Compra de equipo</a></li>
+<li><a href="#sec-5-3">5.3. Costos de Instalación</a></li>
+</ul>
+</li>
+<li><a href="#sec-6">6. Otros Costos</a>
+<ul>
+<li><a href="#sec-6-1">6.1. Auditorías</a></li>
+<li><a href="#sec-6-2">6.2. Costos por caida</a></li>
+</ul>
+</li>
+<li><a href="#sec-7">7. CONCLUSIONES</a></li>
+</ul>
+</div>
+</div>
+<p>
+Total Cost Ownership
+</p>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+El Total Cost of Ownership (TCO de su sigla en inglés) o Costo Total de la
+Propiedad es una herramienta destinada a analizar y hacer más eficiente la
+adquisición de tecnología. Es utilizada tanto por los responsables de las inversiones para
+la toma de decisiones al igual que por los propios vendedores como argumento de venta
+frente a la competencia.
+</p>
+
+<p>
+El TCO es una medida diseñada por el Grupo Gartner a finales de los 70, y ampliamente difundida a
+principios de los 80 para evaluar el costo total en que se incurre al adquirir, inicialmente,
+un sistema de información o tecnología.
+</p>
+
+<ol class="org-ol">
+<li>COSTO TOTAL DE PROPIEDAD: COMPONENTES
+</li>
+</ol>
+
+<p>
+El principio básico del TCO es que los costos de propiedad de cualquier bien tienen
+componentes más allá de los estipulados en el precio de compra del mismo y costos en
+los cuales se debe incurrir para garantizar el funcionamiento correcto del bien durante la
+vida útil del mismo.
+</p>
+
+<ul class="org-ul">
+<li>Se puede hablar de dos tipos de costos:
+
+<p>
+• Directos
+</p>
+
+<p>
+• Indirectos
+</p>
+</li>
+</ul>
+
+<p>
+Costos directos: corresponden al capital, honorarios, costos de mano de obra
+generados por el departamento, o por el personal de sistemas contratado para prestar
+servicios y soluciones para la organización.
+</p>
+
+
+<p>
+Dichos costos incluyen los gastos de capital, administración de sistemas, soporte, costos
+de trabajo de desarrollo, honorarios externos, adquisiciones, capacitación, viajes,
+mantenimiento, soporte y honorarios de comunicación.
+</p>
+
+
+<p>
+Los costos directos buscan regular y capturar todos los gastos directos relacionados con
+los clientes, servidores, periféricos y la red dentro de un ambiente de computación
+distribuida.
+</p>
+
+
+<p>
+Costos indirectos: estos costos indirectos por lo regular son de forma oculta, sin embargo
+las empresas lo que relizan es disminuir sus costos directos para que lo indirectos no se
+vean afectados al capital.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Componentes del TCO.</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Estos componentes son de fomra importante agregar por tener mas detallado lo que se tiene 
+contemplado en el plan de implementación, esto ayuda a tener de forma general todos los 
+aspectos involucrados, por ello lo siguientes componentes:
+</p>
+
+<ul class="org-ul">
+<li>Administración: Este debe de estar dirigida a los departamentos que se tienen contemplados.
+</li>
+</ul>
+
+<p>
+De los cuales se desprenden los siguientes aspectos: 
+</p>
+
+<p>
+1.- Servicios IT: que generaliza a los siguientes, mesas de ayuda, administración de PC'S, 
+                  soporte técnico
+</p>
+
+<p>
+2.- Software de usuario: administración de software, software training, material training,
+software desktop.
+</p>
+
+<p>
+3.- Infraestructura: estaciones de trabajo, sistema operativo de red y herramientas de administración,
+servidores de archivos, componentes de red, cableado.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Costos relativos.</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>Costos de staff: gerentes de TI, administradores de red, técnicos, coordinadores de tecnología, capacitadores.
+</li>
+</ul>
+
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">Capital</th>
+<th scope="col" class="left">hadware</th>
+<th scope="col" class="left">software</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">costos</td>
+<td class="left">servidores</td>
+<td class="left">sistemas operativos</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">PC'S</td>
+<td class="left">herramientas de admin. de red</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">Switches/routers</td>
+<td class="left">sistemas op. de máquinas</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">cableado de red</td>
+<td class="left">software de aplicación estandar</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">periféricos e impresoras</td>
+<td class="left">software de aplicacion específico</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<ul class="org-ul">
+<li>Costos de mantenimiento: contratos de mantemientod de hadware (servidores, equipos de red)
+</li>
+
+<li>Costos de soporte: contratos de soporte, servicios profecionales, cursos o capacitación.
+</li>
+
+<li>Gastos recurrentes: insumos (toner, CD's), conexiones a IPS de internet, comunicaciones telefónicas, enlaces de red de datos.
+</li>
+</ul>
+
+<p>
+Estos costos relativos son costos indirectos que influyen siempre dentro de un proyecto, estos
+pueden causar un incremento en la inversión, sin embargo es fundamental tener en cuenta todos 
+costos.
+</p>
+
+<p>
+En resumen se pueden englobar estos aspectos y que comprenden varios puntos importantes de los cuales son:
+</p>
+
+<ul class="org-ul">
+<li>Instalación, configuración, garantias, licencias de computadora y programas.
+</li>
+<li>Gobierno de tecnología.
+</li>
+<li>Personal.
+</li>
+<li>Control de riesgos, prevensión de riesgos y reaccon ante incidentes.
+</li>
+<li>Seguridad informática.
+</li>
+<li>Auditorías periódicas.
+</li>
+<li>Informatica forence.
+</li>
+<li>Operación.
+</li>
+<li>Caidas, fallas del sistema.
+</li>
+<li>Capacitación del personal.
+</li>
+<li>Costos a largo plazo.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Como calcular un TCO</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Para calcular el TCO de una nueva tecnología que se quiera implementar en la empresa, se tiene que obenter la siguiente información, esta puede ser otorgada por los
+participantes, a través de las cotizaciones que realizara cada uno, es recomendable integrar en la competencia a 2 o mas participantes para el proyecto lo que garantiza
+beneficios para el contratantes, como son: información amplia y de diferentes puntos de vista que ayudan al surgimiento de nuevas ideas que puedan ayudar a la resolución 
+del proyecto, genera competencia entre los participante, análisis para la toma de decisiones por parte del contratante. Aunado a esto es necesario támbien contar con 
+alguien fiel a la empresa que sea encargado del área de sistemas para que pueda defender los derechos de la misma y garantizar que el contratado tenga supervisión por 
+parte del contratante lo que llevará a tener un seguimiento en los procesos de realización.
+</p>
+
+<p>
+Aclarado todo lo anterior es necesario poner a los participantes a cotizar los siguientes puntos:
+</p>
+
+<ul class="org-ul">
+<li>Costos de administración.
+</li>
+<li>Licencias.
+</li>
+<li>Hadware, software.
+</li>
+<li>Capacitación y Desarrollo.
+</li>
+<li>Mantenimiento.
+</li>
+<li>Soporte técnico.
+</li>
+</ul>
+
+<p>
+Cabe mencionar que estas secciones se deben de analizar y calcular a un periodo proyectado de 3 años para lograr una buena
+planificación, debido a que es el periodo de vida de los equipos manifestado en el diario oficial de la Federación que 
+estipula el tiempo de vida útil y el porcentaje de devaluación de las herramientas de una empresa.
+</p>
+
+<p>
+Con ello se tiene que realizar previamente una Solicitud Formal de Propuesta (RFP) de cual esto
+debe de contener:
+</p>
+
+<ul class="org-ul">
+<li>Directrices del proycto:
+
+<p>
+1.- Descripcion detallada de las herramientas productos y servicios que se buscan y estan con
+    contratados o se requieren, así como estan contratando o se requieren, contemplando los 
+    objetivos de la contratación.
+</p>
+</li>
+
+<li>Antecedentes:
+
+<p>
+2.- Resumen de la organización, operaciones y los mercados en los cuales se actua.
+</p>
+</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Perfiles de los clientes
+</li>
+<li>Fortalezas y debilidades
+</li>
+<li>Informacion de los involucrados en el proyecto y ejecutivos de contacto.
+</li>
+
+<li>Alcances de la tarea: enumerar tareas, expectativasal resultado, listas detalladas de responsabilidades en total específico a sub-contratistas.
+</li>
+
+<li>Expectativas de desempeño: espectativa al desempeño, el proceso y métodos para lograr el desempeño con la expectativa analizada.
+</li>
+</ul>
+
+<p>
+Es por ello que TCO brinda como herramienta administrativa un mejora en la toma de decisiones para el implemento de tecnologías en específico hacia una empresa,
+sin embargo se tiene que tener támbien en cuenta lo siguiente:
+</p>
+
+<ul class="org-ul">
+<li>Etregables: productos, reportes y planes, así como los cronogramas de los entregables
+</li>
+<li>Términos de contratación: duración mínima y máxima de la contra-
+</li>
+</ul>
+<p>
+tación, pero sobre todo la renovacion del contrato.
+</p>
+<ul class="org-ul">
+<li>Pagos, premios y castigos: a los pagos de los entregables y acuerdos de ellos.
+</li>
+<li>Términos contractuales y condiciones: modelo estandar de contrataciones financieras y certificado adjuntas a las pólizas
+</li>
+<li>Requerimientos para preparar las propuestas.
+</li>
+<li>Proceso de evaluación.
+</li>
+<li>Cronograma del proceso: la derivación de los procesos.
+</li>
+<li>Personas de contacto.
+</li>
+</ul>
+
+<p>
+Estos puntos son dirigidos al participante contratado por la empresa que desea su proyecto, esto ayuda a tener de forma mas controlado el proceso que lleva la empresa
+contratada y tener resultados a corto, mediano y largo plazo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> TCO Windows y GNU/linux</h2>
+<div class="outline-text-2" id="text-5">
+</div><div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> Adquisición del Software</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+Los siguientes adiquisiciones del software para la adquisición de un servidor de correo en los costos directos para la adquisición.
+Los costos de adquisición de software por unidad de procesamiento fueron como sigue:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">Distribuciones</th>
+<th scope="col" class="left">Costos inicial</th>
+<th scope="col" class="left">2do año</th>
+<th scope="col" class="left">3er año</th>
+<th scope="col" class="left">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">Linux</td>
+<td class="left">$400</td>
+<td class="left">$000</td>
+<td class="left">$000</td>
+<td class="left">$400</td>
+</tr>
+
+<tr>
+<td class="left">Windows</td>
+<td class="left">$5,300</td>
+<td class="left">$1300</td>
+<td class="left">$1300</td>
+<td class="left">$7900</td>
+</tr>
+</tbody>
+</table>
+
+
+<div class="figure">
+<p><img src="./imagenes/adquisicionsoftware.png" alt="adquisicionsoftware.png" />
+</p>
+</div>
+
+<p>
+Como se puede los modelos de licenciamiento de Linux son más flexibles que los de Windows. Primero, no hay licencias
+de acceso para cada cliente, ni cargos por procesador, u otros costos más allá de la compra del software. Segundo,
+una compañía podría comprar versiones comerciales para proyectos piloto y para propósitos de entrenamiento de los
+administradores, y luego utilizar una distribución gratuita para las instalaciones de producción y así aprovechar las
+economías de escala que hacen a Linux la opción más competitiva.
+</p>
+
+<p>
+Finalmente, Windows está licenciado por servidor, y está disponible para compra sin las licencias de acceso del cliente (CAL) por $700 dólares o $5,320 por unidad de procesamiento. Las CAL no son
+necesarias para los usuarios anónimos de Web. Sin embargo, los usuarios autentificados requerirán licenciamiento
+adicional. Es importante consultar con Microsoft para asegurarse de que en una instalación de este tipo, los sistemas
+estén correctamente licenciados.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> Mantenimiento y Compra de equipo</h3>
+<div class="outline-text-3" id="text-5-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">Distribución</th>
+<th scope="col" class="left">Compra</th>
+<th scope="col" class="left">Mantenimiento 2do año</th>
+<th scope="col" class="left">Mantenimiento 3er año</th>
+<th scope="col" class="left">TOTAl</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">Linux</td>
+<td class="left">$37,500</td>
+<td class="left">$250</td>
+<td class="left">$250</td>
+<td class="left">$38,000</td>
+</tr>
+
+<tr>
+<td class="left">Windows</td>
+<td class="left">$38,500</td>
+<td class="left">$350</td>
+<td class="left">$350</td>
+<td class="left">$39,200</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<div class="figure">
+<p><img src="./imagenes/mantenimiento.png" alt="mantenimiento.png" />
+</p>
+</div>
+
+<p>
+El costeo de la adquisición de equipo y su mantenimiento no es en considerable la comparación debido
+a que los requisitos de hadware fueron lo mismo y el mantenimiento en un periodo de un año para su 
+eficiencia del equipo, se puede llegar a la conclusión que la adquisición del equipo y su mantenimiento
+en las diferentes distribuciones no exite un incremento mayor.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-5-3" class="outline-3">
+<h3 id="sec-5-3"><span class="section-number-3">5.3</span> Costos de Instalación</h3>
+<div class="outline-text-3" id="text-5-3">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">Distribuciones</th>
+<th scope="col" class="left">Soporte adquirido</th>
+<th scope="col" class="left">Salario del administrador</th>
+<th scope="col" class="left">TOTAL en 3años</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">Linux</td>
+<td class="left">$10*</td>
+<td class="left">$12,000</td>
+<td class="left">$36,000</td>
+</tr>
+
+<tr>
+<td class="left">Windows</td>
+<td class="left">$1520</td>
+<td class="left">$15,000</td>
+<td class="left">$45,000</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<div class="figure">
+<p><img src="./imagenes/salario.png" alt="salario.png" /> 
+</p>
+</div>
+
+
+<p>
+Estos costos de instalación es lo que se ve reflejado con consultoría y asesoramiento o los fabricante de estos productos
+por soporte técnico, planeación de la instalación, asistencia de migración, desarrollo de acuerdo a las condiciones o necesidades
+de cada empresa.
+</p>
+
+<p>
+Aún cuando Windows fue diseñado para que sea fácil su administración y uso, este diseño necesita las interfases administrativas de las
+capas fundamentales del sistema operativo. Por ello, cuando ocurrían problemas serios en un sistema Windows, los
+administradores tuvieron que pedir ayuda externa, típicamente directamente de Microsoft, para poderlos resolver.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Otros Costos</h2>
+<div class="outline-text-2" id="text-6">
+</div><div id="outline-container-sec-6-1" class="outline-3">
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> Auditorías</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+Estos costos son considerables por varios puntos, el primero de ellos es la auditoría; al utilizar distribuciones de Windows la inclusión
+de la auditoría es un tema poco tocado esto debido a las auditorias que puede realizar Windows, es decir que window realiza vitas a las empresas
+que tienen sus sistemas y en caso de que el sistema sea una copia ilegal la demanda podria varia de entre $5 a $50 dolares por cada equipo, servidor
+empleado para la tecnología implementada.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-6-2" class="outline-3">
+<h3 id="sec-6-2"><span class="section-number-3">6.2</span> Costos por caida</h3>
+<div class="outline-text-3" id="text-6-2">
+<p>
+Historicamente, Microsoft tiene una mala reputación por la seguridad de sus productos, y aún cuando ese fabricante
+ha trabajado para reparar su imagen, lo que provoca que sus clientes sean blanco de hackers que puedan montarse a su red y por lo tanto los convierten
+en empresas bulnerables y se encuentren en alto riesgo de un intento de sabotaje.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> CONCLUSIONES</h2>
+<div class="outline-text-2" id="text-7">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">Distribución</th>
+<th scope="col" class="left">Adquisisión de software</th>
+<th scope="col" class="left">Mantenimiento</th>
+<th scope="col" class="left">Costo de instalación</th>
+<th scope="col" class="left"><b>TOTAL</b></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">Linux</td>
+<td class="left">$400</td>
+<td class="left">$38,000</td>
+<td class="left">$36,000</td>
+<td class="left">$74,400</td>
+</tr>
+
+<tr>
+<td class="left">Windows</td>
+<td class="left">$7900</td>
+<td class="left">$39,200</td>
+<td class="left">$45,000</td>
+<td class="left">$92,100</td>
+</tr>
+</tbody>
+</table>
+
+
+<div class="figure">
+<p><img src="./imagenes/comparacion.png" alt="comparacion.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: ingenieros</p>
+<p class="date">Created: 2005-12-31 sáb 22:19</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.4.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
